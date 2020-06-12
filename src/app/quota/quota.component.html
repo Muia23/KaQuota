@@ -1,5 +1,15 @@
-<div class="container" *ngFor= 'let quota of quotas'>
-    <p> {{quota.description}}</p>
-    <hr>
-    <h3 > {{quota.name}} </h3>
-    </div>
+<div class="container" style=" width: 60em; float: left; " *ngFor= 'let quota of quotas'>
+	<div class="row">
+	    <div class="container">
+            <blockquote class="quote-card blue-card">
+              <p>
+                {{quota.description}}
+              </p>
+              <cite>
+                 {{quota.name}} 
+              </cite>
+            </blockquote>
+        
+        </div>
+	</div>
+</div>
