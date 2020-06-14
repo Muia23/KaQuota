@@ -1,15 +1,37 @@
-<div class="container" style=" width: 60em; float: left; " *ngFor= 'let quota of quotas'>
-	<div class="row">
-	    <div class="container">
-            <blockquote class="quote-card blue-card">
-              <p>
-                {{quota.description}}
-              </p>
-              <cite>
-                 {{quota.name}} 
-              </cite>
-            </blockquote>
-        
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-7" style="background: #0078FF; min-height: 100vh;">
+        <app-landing></app-landing>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div>
+          <app-quota-form (addQuota)="addNewQuota($event)"></app-quota-form>
         </div>
-	</div>
-</div>
+      </div>
+      <div class="quotes col-md-5">
+        <div class="quotes-field">
+        <div class="container" *ngFor= 'let quota of quotas;let i = index'>
+          <blockquote class="quote-card blue-card">
+            <p>
+              {{quota.description}}
+            </p>
+            <cite>
+              {{quota.name}}
+              <span><p> 1 <button>u</button> 2 <button>d</button></p></span> 
+            </cite>
+         </blockquote>
+        </div>
+        </div>
+      </div>
+    </div>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">  
+    </div>
+  </body>
+</html>
+
+
