@@ -9,10 +9,15 @@ import { Quota } from '../quota'
 export class QuotaComponent implements OnInit {
 
   quotas: Quota[]= [
-    {id:1, name:'Username', description:'The first Quote'}
+    new Quota(1, 'Alexander Pope','To err is human, to forgive is devine'),
   ]
   constructor() { }
 
+  addNewQuota(quota){
+    let quotaLength = this.quotas.length;
+    quota.id = quotaLength +1;
+    this.quotas.push(quota)
+  }
   ngOnInit(): void {
   }
 
