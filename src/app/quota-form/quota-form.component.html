@@ -1,13 +1,23 @@
-<div class="footer">
-    <form>
+<div>
+    <form (ngSubmit)='submitQuota()' #quotaForm='ngForm'>
         <div class="from-group row">
-            <label for="email" class="col-sm-2 col-form-label">Username</label>
-            <div class="col-sm-8">
-                <input type="text" class="form-control " id="name">
+            <div class="col"></div>
+            <div class="col-md-2">
+                <label for="email" class="col-sm-2 col-form-label">Username</label>
+            </div>    
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="name" [(ngModel)]="newQuota.name" name="name" required>
             </div>
+            <div class="col"></div>
         </div>
+        <br>
         <div class="form-group row">
-            <textarea id="description" class="form-control" rows="3" placeholder="Add your wise quote.. "></textarea>
+            <div class="col"></div>
+            <div class="col-md-8 text">
+                <textarea id="description" class="form-control" rows="3" placeholder="Add your wise quote.. " required [(ngModel)]="newQuota.description" name="description"></textarea>
+                <button class="icon"> > </button>
+            </div>
+            <div class="col"></div>    
         </div>
     </form>
 </div>
