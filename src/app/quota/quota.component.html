@@ -15,15 +15,34 @@
       </div>
       <div class="quotes col-md-5">
         <div class="quotes-field">
-        <div class="container" *ngFor= 'let quota of quotas;let i = index'>
-          <blockquote class="quote-card blue-card">
+        <div class="container">
+          <blockquote class="quote-card">
             <p>
-              {{quota.description}}
+              To err is human, to forgive is devine
             </p>
             <cite>
-              {{quota.name}}
-              <span><p> 1 <button>u</button> 2 <button>d</button></p></span> 
+              <p>
+                <span id=""> Alexander Pope </span>
+                <span id="uvote">856</span>UpVotes<button (click)="likeButtonClick()">u</button>
+                <span id="dvote">27</span>DownVotes<button (click)="dislikeButtonClick()">d</button>
+              </p>
             </cite>
+            <hr>
+              <p>
+                <span>System</span>
+                <span>50min Ago.</span>   
+              </p>  
+         </blockquote>
+        </div>
+        <div class="container" *ngFor= 'let quota of quotas;let i = index'>
+          <blockquote class="quote-card">
+            <p> {{quota.description}}</p>
+            <cite>
+              <p>
+                <app-quota-details [quota]='quota' (isComplete) = 'deleteQuota($event,i)'></app-quota-details>
+              </p>
+            </cite>  
+            
          </blockquote>
         </div>
         </div>
