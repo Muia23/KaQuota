@@ -7,10 +7,46 @@ import { Quota } from '../quota'
   styleUrls: ['./quota.component.css']
 })
 export class QuotaComponent implements OnInit {
-
+  numberOfLikes : any = 0;
+  
+ likeButtonClick(){
+   let like = document.getElementById("uvote");
+   if (like.innerHTML ==="856" ){
+     like.innerHTML = "857";   
+   } else {
+     like.innerHTML = "856";
+   }
+ }
+voteButtonClick(){
+  let other = document.getElementById("noma");
+  if (this.numberOfLikes = "0"){
+    this.numberOfLikes = "1";
+  } else {
+    this.numberOfLikes = "0";
+  }
+}
+ 
+ dislikeButtonClick(){
+  let like = document.getElementById("dvote");
+  if (like.innerHTML ==="27" ){
+    like.innerHTML = "28";
+  } else {
+    like.innerHTML = "27";
+  }
+ }
+  
   quotas: Quota[]= [
-    new Quota(1, 'Alexander Pope','To err is human, to forgive is devine'),
+    new Quota(1, 'Username','Author','The first Quote'),
   ]
+  deleteQuota(isComplete, index){
+    if(isComplete) {
+      let toDelete = confirm( 'Are you sure you want to delete this quote?')
+
+      if (toDelete){
+        this.quotas.splice(index,1)
+      }
+    }
+  }
   constructor() { }
 
   addNewQuota(quota){
