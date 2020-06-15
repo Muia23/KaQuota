@@ -1,0 +1,32 @@
+.author{
+    font-size: 16px;
+}
+.votes{
+    float: right;
+    font-size: 13px;
+    font-style: normal;
+}
+.up{
+    font-style: normal;
+
+}
+.down{
+    font-style: normal;
+    
+}
+
+.user{
+    font-size: 12px;
+    color: blue;
+}
+.time{
+    margin-left: 40%;
+    font-size: 8px;
+    font-weight: bold;
+    color: blue;
+    opacity: 1;
+}
+.delete{
+    font-style: normal;
+    font-size: 14px;
+}
