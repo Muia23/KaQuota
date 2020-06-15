@@ -36,7 +36,7 @@ voteButtonClick(){
  }
   
   quotas: Quota[]= [
-    new Quota(1, 'Username','Author','The first Quote'),
+    new Quota(1, 'Username','Author','The first Quote',new Date(2020,6,15)),
   ]
   deleteQuota(isComplete, index){
     if(isComplete) {
