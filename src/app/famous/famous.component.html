@@ -1,4 +1,45 @@
-<div class="trending">
-    <h1>#Famous</h1>
-    <p>famous quotes carousel</p>
-</div>
+<h3 class="trend">#Trending</h3>
+  <ngb-carousel 
+  [showNavigationIndicators]="false"
+  >
+  <ng-template ngbSlide>
+    <div class="container">  
+    <blockquote class="quote-card">
+        <p>The greatest glory in living lies not in never falling, but in rising every time we fall.</p>
+        <cite>
+            <span class="author">by Nelson Mandela</span>
+            <div class="votes">
+                <span id="number1">1,456 </span>
+                <button class="vote btn" (click)="likeClick()"> 👍 </button>
+                <button class="vote btn" (click)="dislikeClick()"> 👎 </button>
+            </div>
+            <hr>    
+            <p>
+                <span class="user">Muia23</span>
+                <span class="time">1yearAgo</span>
+            </p>
+        </cite>
+    </blockquote>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="container">
+    <blockquote class="quote-card">
+        <p>The way to get started is to quit talking and begin doing.</p>
+        <cite>
+            <span class="author">by Walt Disney</span>
+            <div class="votes">
+                <span id="number2">  890  </span>
+                <button class="vote btn" (click)="likeClick()"> 👍 </button>
+                <button class="vote btn" (click)="dislikeClick()"> 👎 </button>
+            </div>
+            <hr>    
+            <p>
+                <span class="user">Loise</span>
+                <span class="time">3weeksAgo</span>
+            </p>
+        </cite>
+    </blockquote>
+    </div>  
+  </ng-template>
+</ngb-carousel>
