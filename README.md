@@ -8,7 +8,7 @@ This is Angular application for users to quote great authors and even be able to
 
 ## Project setup instruction
 The application is con be viewed using any local browser.
-Here is a link to the live site()
+Here is a link to the live site(https://muia23.github.io/KaQuota/)
 ## License info
 MIT License
 
