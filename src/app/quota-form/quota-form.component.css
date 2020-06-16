@@ -1,4 +1,7 @@
-
+.form{
+  position: relative;
+  bottom: 4px;
+}
 .text{
     position: relative;
     border-radius: 4px;

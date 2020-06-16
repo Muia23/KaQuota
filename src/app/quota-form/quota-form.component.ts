@@ -9,12 +9,13 @@ import { timer } from 'rxjs';
 })
 export class QuotaFormComponent implements OnInit {
 
+
   newQuota = new Quota(0,"","","",new Date());
   @Output() addQuota = new EventEmitter<Quota>();
 
-  submitQuota(){
-    this.addQuota.emit(this.newQuota);
-  }
+    submitQuota(){
+      this.addQuota.emit(this.newQuota);
+    }
   constructor() { }
 
   ngOnInit() {

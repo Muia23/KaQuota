@@ -9,7 +9,7 @@
         <div class="landing col-md-7">
           <app-landing></app-landing>
           <br><br>
-          <div>
+          <div class="form">
             <app-quota-form (addQuota)="addNewQuota($event)"></app-quota-form>
           </div>
         </div>
@@ -17,7 +17,7 @@
           <div class="quotes-field">  
             <div class="container" *ngFor= 'let quota of quotas;let i = index'>
               <blockquote class="quote-card">
-                <p> {{quota.description}}</p>
+                <p appHighlight> {{quota.description}}</p>
                 <cite>
                   <p>
                     <app-quota-details [quota]='quota' (isComplete) = 'deleteQuota($event,i)'></app-quota-details>

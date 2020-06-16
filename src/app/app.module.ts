@@ -14,6 +14,7 @@ import { FamousComponent } from './famous/famous.component';
 import { QuotaFormComponent } from './quota-form/quota-form.component';
 import { QuotaDetailsComponent } from './quota-details/quota-details.component';
 import { DateAgoPipe } from './pipes/date-ago.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { DateAgoPipe } from './pipes/date-ago.pipe';
     QuotaFormComponent,
     QuotaDetailsComponent,
     DateAgoPipe,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,

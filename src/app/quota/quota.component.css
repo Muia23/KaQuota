@@ -97,4 +97,7 @@ html,body {
 .quote-card.blue-card:before, .quote-card.blue-card:after {
   color: #5FAAFF;
 }
-
+.form {
+  position: relative;
+  bottom: 5px;
+}
