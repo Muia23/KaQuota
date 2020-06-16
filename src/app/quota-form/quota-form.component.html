@@ -1,12 +1,13 @@
 <div>
-    <form (ngSubmit)='submitQuota()' #quotaForm='ngForm'>
+    <form #quotaForm='ngForm' (ngSubmit)='submitQuota(); quotaForm.reset()'>
         <div class="from-group row">
             <div class="col"></div>
-            <div class="col-md-2">
-                <label for="email" class="col-sm-2 col-form-label">Username</label>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="name" placeholder="Username" [(ngModel)]="newQuota.name" name="name" required>
+                
             </div>    
             <div class="col-md-5">
-                <input type="text" class="form-control" id="name" [(ngModel)]="newQuota.name" name="name" required>
+                <input type="text" class="form-control" id="author" placeholder="Author" [(ngModel)]="newQuota.author" name="author" required>
             </div>
             <div class="col"></div>
         </div>
@@ -14,8 +15,8 @@
         <div class="form-group row">
             <div class="col"></div>
             <div class="col-md-8 text">
-                <textarea id="description" class="form-control" rows="3" placeholder="Add your wise quote.. " required [(ngModel)]="newQuota.description" name="description"></textarea>
-                <button class="icon"> > </button>
+                <textarea id="description" class="form-control" rows="3" placeholder="Add your wise quote.. " [(ngModel)]="newQuota.description" name="description" required></textarea>
+                <button type="submit" class="icon btn"> > </button>
             </div>
             <div class="col"></div>    
         </div>
