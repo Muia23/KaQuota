@@ -36,7 +36,7 @@ voteButtonClick(){
  }
   
   quotas: Quota[]= [
-    new Quota(1, 'Username','Author','The first Quote',new Date(2020,6,15)),
+    new Quota(1, 'System','Alexander Pope','To err is human, to forgive is devine',new Date(2020,6,15)),
   ]
   deleteQuota(isComplete, index){
     if(isComplete) {
@@ -52,6 +52,7 @@ voteButtonClick(){
   addNewQuota(quota){
     let quotaLength = this.quotas.length;
     quota.id = quotaLength +1;
+    quota.time = new Date();
     this.quotas.push(quota)
   }
   ngOnInit(): void {
