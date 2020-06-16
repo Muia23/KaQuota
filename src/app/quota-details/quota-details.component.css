@@ -3,25 +3,24 @@
 }
 .votes{
     float: right;
-    font-size: 13px;
+    padding-right:40px;
     font-style: normal;
 }
-.up{
+.vote{
+    font-size: 15px;
+}
+.number{
     font-style: normal;
 
-}
-.down{
-    font-style: normal;
-    
 }
 
 .user{
-    font-size: 12px;
+    font-size: 14px;
     color: blue;
 }
 .time{
     margin-left: 40%;
-    font-size: 8px;
+    font-size: 11px;
     font-weight: bold;
     color: blue;
     opacity: 1;

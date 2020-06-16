@@ -1,10 +1,11 @@
-<span class="author">{{quota.author}}</span>
+<span class="author">by {{quota.author}}</span>
 <div class="votes">
-  <span class="up">  0  </span><button class="uvote" (click)="voteButtonClick()"> 👍 </button>
-  <span class="down">  0  </span><button class="dvote" (click)="dislikeButtonClick()"> 👎 </button>
+  <span class="number">  {{numberOfLikes}}  </span>
+  <button class="vote btn " (click)="likeButtonClick()">👍</button>
+  <button class="vote btn " (click)="dislikeButtonClick()">👎</button>
 </div>
 <hr>
   <p>
     <span class="user">{{quota.name}}</span>
-    <span class="time">{{quota.time | dateAgo}}</span> | <button class="delete" (click)='quotaDelete(true)'>🗑️</button>
+    <span class="time">{{quota.time | dateAgo}}</span> | <button class="delete btn" (click)='quotaDelete(true)'>🗑️</button>
   </p>

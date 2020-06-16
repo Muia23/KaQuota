@@ -8,37 +8,21 @@ import { Quota } from '../quota'
 })
 export class QuotaDetailsComponent implements OnInit {
   
-  numberOfLikes : any = 0;
 
   @Input() quota: Quota;
   @Output() isComplete = new EventEmitter<boolean>();
+  
+  numberOfLikes :number = 0;
+
   constructor() { }
 
 
   likeButtonClick(){
-    let like = document.getElementById("uvote");
-    if (like.innerHTML ==="856" ){
-      like.innerHTML = "857";   
-    } else {
-      like.innerHTML = "856";
-    }
+    this.numberOfLikes++;
   }
- voteButtonClick(){
-   let ups = document.getElementById("up");
-   if (ups.innerHTML = "0"){
-     ups.innerHTML = "1";
-   } else {
-     ups.innerHTML = "0";
-   }
- }
   
   dislikeButtonClick(){
-   let downs = document.getElementById("down");
-   if (downs.innerHTML ==="0" ){
-     downs.innerHTML = "1";
-   } else {
-     downs.innerHTML = "0";
-   }
+    this.numberOfLikes--;
   }
 
   quotaDelete(complete:boolean){
