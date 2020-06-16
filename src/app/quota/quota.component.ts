@@ -37,6 +37,8 @@ voteButtonClick(){
   
   quotas: Quota[]= [
     new Quota( 1, 'System','Alexander Pope','To err is human, to forgive is devine',new Date(2020,4,15)),
+    new Quota( 2, 'Floyd','Elbert Hubbard','Don’t take life too seriously. You’ll never get out of it alive',new Date(2020,2,12)),
+    new Quota( 3, 'System','Wilfred Muema','It will end in tears',new Date(2020,6,8)),
 
   ];
 
